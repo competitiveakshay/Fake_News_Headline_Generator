@@ -19,24 +19,23 @@ def main():
     print(" FAKE NEWS HEADLINES ")
     print("=============================")
 
-while True:
-    try:
-        count = int(input("How many headlines do you want to generate?: "))
-        print("\nGenerating Headlines...\n")
-        
-        main()
-        print()
-        for i in range(count):
-            print(f"{i+1}. {generate_headline()}")
-        
-        again = input("\nDo you want to generate more? (yes/no): ").strip().lower()
-        if again != "yes":
-            print("\nThanks for using Fake News Headline Generator!")
-            break
+    while True:
+      try:
+          count = int(input("How many headlines do you want to generate?: "))
+          print("\nGenerating Headlines...\n")
+          print()
+          
+          for i in range(count):
+              print(f"{i+1}. {generate_headline()}")
+          
+          again = input("\nDo you want to generate more? (yes/no): ").strip().lower()
+          if again != "yes":
+              print("\nThanks for using Fake News Headline Generator!")
+              break
 
-    except ValueError:
-        print("Please enter a valid number.")
+      except ValueError:
+          print("Please enter a valid number.")
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
 
